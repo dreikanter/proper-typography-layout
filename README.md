@@ -1,4 +1,4 @@
-# Proper Russian and English Typography Layout for macOS
+# Proper English and Russian Typography Layout for macOS
 
 ## Installation
 
