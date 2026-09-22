@@ -1,17 +1,25 @@
-# Proper Typography Layout for macOS
+# Proper Russian and English Typography Layout for macOS
 
-Installation:
+## Installation
 
-```bash
-sudo cp -R ./ProperTypographyLayout.bundle /Library/Keyboard\ Layouts/
+1. Switch to a built-in layout (such as ABC).
+2. Remove unwanted layouts in **System Settings > Keyboard > Text Input > Edit**.
+3. Manually delete their bundles from `/Library/Keyboard Layouts/` and
+   `~/Library/Keyboard Layouts/`, if present:
 
-# Clear keyboard layout cache (optional but recommended)
-sudo rm -rf /System/Library/Caches/com.apple.IntlDataCache*
-```
+   ```sh
+   sudo rm -r '/Library/Keyboard Layouts/[Unwanted Layout].bundle'
+   rm -r "$HOME/Library/Keyboard Layouts/[Unwanted Layout].bundle"
+   ```
 
-Setup:
+4. Clone the repository and install the bundle:
 
-1. Go to System Settings > Keyboard > Input Sources
-2. Click '+' to add the new layout
-3. Remove any old versions if present
-4. Test the grave/tilde key
+   ```sh
+   git clone https://github.com/dreikanter/proper-typography-layout.git
+   cd proper-typography-layout
+   sudo cp -R ./ProperTypographyLayout.bundle '/Library/Keyboard Layouts/'
+   ```
+
+5. Log out and log back in.
+6. Go to **System Settings > Keyboard > Text Input > Edit**, click **+** and add **English – Proper Typography** and/or **Russian – Proper Typography**.
+7. Select the new layout and test the grave/tilde key.
